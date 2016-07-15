@@ -27,7 +27,9 @@ Android 3D立体无限旋转滚动容器
 
 因为本身继承自ViewGroup，所以基本控件都是可以包裹的
 
-**自定义的方法**
+自定义的方法
+----
+
 
 **setStartScreen(int startScreen)** ：设置第一页展示的页面 @param startScreen (0,getChildCount-1)
 
@@ -50,6 +52,7 @@ Android 3D立体无限旋转滚动容器
 ![这里写图片描述](http://img.blog.csdn.net/20160715181619444)
 
 
-** 缺陷说明**
+缺陷说明
+----
 
 目前容器的item数量需要大于等于3，小于3个滑动时会些问题。设置的最开始展示的item位置要是第2个，这么做是为了保证第1个被隐藏，从而导致最开始向上滑动时的正常。
