@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blue_deep"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <mr_immortalz.com.stereoview.custom.StereoView
+        android:id="@+id/stereoView"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_password"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_password"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_email"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_email"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="Email"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_user"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_username"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="UserName"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_username"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_love"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomTextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:gravity="center"
+                android:hint="You are welcome !"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_love"/>
+        </LinearLayout>
+
+    </mr_immortalz.com.stereoview.custom.StereoView>
+
+</LinearLayout>

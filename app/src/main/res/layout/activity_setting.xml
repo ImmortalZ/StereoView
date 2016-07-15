@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blue_deep"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="3D效果"
+        android:textColor="@color/font_white"/>
+
+    <mr_immortalz.com.stereoview.custom.StereoView
+        android:id="@+id/stereoView1"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_password"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_password"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="0"
+                android:inputType="textPassword"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_email"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_email"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="1"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_user"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:id="@+id/et_username"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="2"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:id="@+id/rv_username"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_love"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomTextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="3"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_love"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_love"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomTextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="4"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_love"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ly_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_love"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomTextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="5"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_love"/>
+        </LinearLayout>
+    </mr_immortalz.com.stereoview.custom.StereoView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="平面效果"
+        android:textColor="@color/font_white"/>
+
+    <mr_immortalz.com.stereoview.custom.StereoView
+        android:id="@+id/stereoView2"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_password"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="0"
+                android:inputType="textPassword"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_email"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="1"
+                android:textColorHint="@color/font_gray"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_user"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomEdittext
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="2"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_love"/>
+
+            <mr_immortalz.com.stereoview.custom.CustomTextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="3"
+                android:textColorHint="@color/font_gray"
+                android:textSize="18sp"/>
+
+            <mr_immortalz.com.stereoview.custom.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_love"/>
+        </LinearLayout>
+
+    </mr_immortalz.com.stereoview.custom.StereoView>
+
+    <TextView
+        android:id="@+id/tv_angle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="设置3D旋转页面夹角"
+        android:textColor="@color/font_white"/>
+
+    <SeekBar
+        android:id="@+id/sb_angle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:max="180"/>
+    <Button
+        android:text="上一页"
+        android:id="@+id/btn_pre"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <Button
+        android:text="下一页"
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <Button
+        android:text="跳转到第4页"
+        android:id="@+id/btn_select"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+</LinearLayout>
