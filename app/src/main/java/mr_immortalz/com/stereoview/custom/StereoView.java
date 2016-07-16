@@ -195,8 +195,8 @@ public class StereoView extends ViewGroup {
         mState = State.ToPre;
         addPre();//增加新的页面
         //计算松手后滑动的item个数
-        int flingSpeed = (yVelocity - standerSpeed) > 0 ? (int) (yVelocity - standerSpeed) : 0;
-        addCount = flingSpeed / flingSpeed + 1;
+        int flingSpeedCount = (yVelocity - standerSpeed) > 0 ? (int) (yVelocity - standerSpeed) : 0;
+        addCount = flingSpeedCount / flingSpeed + 1;
         //mScroller开始的坐标
         startY = getScrollY() + mHeight;
         setScrollY(startY);
@@ -216,8 +216,8 @@ public class StereoView extends ViewGroup {
         int duration;
         mState = State.ToNext;
         addNext();
-        int flingSpeed = (Math.abs(yVelocity) - standerSpeed) > 0 ? (int) (Math.abs(yVelocity) - standerSpeed) : 0;
-        addCount = flingSpeed / flingSpeed + 1;
+        int flingSpeedCount = (Math.abs(yVelocity) - standerSpeed) > 0 ? (int) (Math.abs(yVelocity) - standerSpeed) : 0;
+        addCount = flingSpeedCount / flingSpeed + 1;
         startY = getScrollY() - mHeight;
         setScrollY(startY);
         delta = mHeight * mStartScreen - startY + (addCount - 1) * mHeight;
