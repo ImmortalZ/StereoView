@@ -1,4 +1,5 @@
 # StereoView
+
 --The idea is from weibo.com
 
 **This is the original animation effects .**
@@ -59,6 +60,7 @@ define interface
 # Defects #
 ---
 1.to show best,you must ensure the StereoView must have threee child at least.
+
 2.to show best,you must ensure the method's ( setStartScreen(int startScreen) ) parameter are correct.
 
 
