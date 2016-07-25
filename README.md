@@ -1,4 +1,71 @@
 # StereoView
+--The idea is from weibo.com
+
+**This is the original animation effects .**
+
+![](https://camo.githubusercontent.com/dc86ed6f966895ef1e343efc5cc7fd0469ec33c1/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535343532303530)
+
+**This is what we achieve animation effects.**
+
+![](https://camo.githubusercontent.com/d0e30babb28951722717fa32f9d273b7eec12232/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535373236373837)
+
+**we can infinite loop rolling**
+
+![](https://camo.githubusercontent.com/043b4cf0ad7c9bee2dcdb500bb26f81af3d903c6/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535383132303037)
+
+
+**Of course,on the basis of the original,I add the other animation effects.
+As you see.**
+![](https://camo.githubusercontent.com/55cb4f3363c24788d7398c81047cb6a506eecceb/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313631333532363233)
+
+**it extends ViewGroup,of course we can contain any view like imageview**
+
+![](https://camo.githubusercontent.com/69d48f79bb080c5c196ff99211e2d09522a6bb81/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313833393439323739)
+
+# How to use it ? #
+---
+just like use ViewGroup.You can learn from it by demo.
+
+# Additional Options #
+---
+to set the first show item
+> setStartScreen(int startScreen) ： @param startScreen (0,getChildCount-1)
+
+to set the move resistance
+> setResistance(float resistance) ：  @param resistance (0,...)
+
+to set the interpolator
+> setInterpolator(Interpolator mInterpolator) ： 
+
+to set the degree of tow item which are rolling
+> setAngle(float mAngle)： [0f,180f]
+
+to set whether to use 3D animation effects.
+> setCan3D(boolean can3D) 
+
+turn to specified position.
+> setItem(int itemId) :  @param itemId [0,getChildCount-1]
+
+turn to previous item
+> toPre() 
+
+turn to next item
+> toNext() 
+
+define interface
+
+![](https://camo.githubusercontent.com/8abcd140df64926030c3e3aee12abc56a453a3fd/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313831363139343434)
+
+# Defects #
+---
+1.to show best,you must ensure the StereoView must have threee child at least.
+2.to show best,you must ensure the method's ( setStartScreen(int startScreen) ) parameter are correct.
+
+
+---
+
+
+
 Android 3D立体无限旋转滚动容器
 
 相应的博文 http://blog.csdn.net/Mr_immortalZ/article/details/51918560
