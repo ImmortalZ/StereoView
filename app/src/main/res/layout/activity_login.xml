@@ -34,7 +34,7 @@
                 android:layout_height="25dp"
                 android:background="@drawable/icon_password"/>
 
-            <mr_immortalz.com.stereoview.custom.CustomEdittext
+            <EditText
                 android:id="@+id/et_password"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
@@ -67,7 +67,7 @@
                 android:layout_height="25dp"
                 android:background="@drawable/icon_email"/>
 
-            <mr_immortalz.com.stereoview.custom.CustomEdittext
+            <EditText
                 android:id="@+id/et_email"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
@@ -100,7 +100,7 @@
                 android:layout_height="25dp"
                 android:background="@drawable/icon_user"/>
 
-            <mr_immortalz.com.stereoview.custom.CustomEdittext
+            <EditText
                 android:id="@+id/et_username"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
@@ -136,7 +136,7 @@
                 android:layout_height="25dp"
                 android:background="@drawable/icon_love"/>
 
-            <mr_immortalz.com.stereoview.custom.CustomTextView
+            <TextView
                 android:id="@+id/tv_welcome"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
