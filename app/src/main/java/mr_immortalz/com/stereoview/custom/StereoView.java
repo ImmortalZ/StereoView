@@ -18,7 +18,7 @@ import mr_immortalz.com.stereoview.utils.LogUtil;
 /**
  * Created by Mr_immortalZ on 2016/7/10.
  * email : mr_immortalz@qq.com
- *
+ * <p>
  * Editor: Ybao 2016/7/31
  * email : 392579823@qq.com
  */
@@ -143,8 +143,7 @@ public class StereoView extends ViewGroup {
         float y = event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //
-                break;
+                return true;
             case MotionEvent.ACTION_MOVE:
                 if (isSliding) {
                     int realDelta = (int) (mDownY - y);
