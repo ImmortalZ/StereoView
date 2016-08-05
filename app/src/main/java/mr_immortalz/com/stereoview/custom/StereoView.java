@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
@@ -17,6 +18,9 @@ import mr_immortalz.com.stereoview.utils.LogUtil;
 /**
  * Created by Mr_immortalZ on 2016/7/10.
  * email : mr_immortalz@qq.com
+ * <p>
+ * Editor: Ybao 2016/7/31
+ * email : 392579823@qq.com
  */
 public class StereoView extends ViewGroup {
 
@@ -28,10 +32,10 @@ public class StereoView extends ViewGroup {
     private boolean isCan3D = true;//是否开启3D效果
 
     private Context mContext;
+    private int mTouchSlop;
     private VelocityTracker mVelocityTracker;
     private Camera mCamera;
     private Matrix mMatrix;
-    private float mDownY;//记录按下时的Y坐标
     private int mWidth;//容器的宽度
     private int mHeight;//容器的高度
     private static final int standerSpeed = 2000;
@@ -41,6 +45,8 @@ public class StereoView extends ViewGroup {
     private boolean isAdding = false;//fling时正在添加新页面，在绘制时不需要开启camera绘制效果，否则页面会有闪动
     private int mCurScreen = 1;//记录当前item
     private IStereoListener iStereoListener;
+    private float mDownX, mDownY, mTempY;
+    private boolean isSliding = false;
 
     private State mState = State.Normal;
 
@@ -62,6 +68,7 @@ public class StereoView extends ViewGroup {
      * 初始化数据
      */
     private void init(Context context) {
+        mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
         mCamera = new Camera();
         mMatrix = new Matrix();
         if (mScroller == null) {
@@ -95,11 +102,36 @@ public class StereoView extends ViewGroup {
     }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            return false;
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        float x = ev.getX();
+        float y = ev.getY();
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                isSliding = false;
+                mDownX = x;
+                mTempY = mDownY = y;
+                if (!mScroller.isFinished()) {
+                    //当上一次滑动没有结束时，再次点击，强制滑动在点击位置结束
+                    mScroller.setFinalY(mScroller.getCurrY());
+                    mScroller.abortAnimation();
+                    scrollTo(0, getScrollY());
+                    isSliding = true;
+                }
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (!isSliding) {
+                    isSliding = isCanSliding(ev);
+                }
+                break;
+            default:
+                break;
         }
-        return true;
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        return isSliding;
     }
 
     @Override
@@ -111,44 +143,53 @@ public class StereoView extends ViewGroup {
         float y = event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                if (!mScroller.isFinished()) {
-                    //当上一次滑动没有结束时，再次点击，强制滑动在点击位置结束
-                    mScroller.setFinalY(mScroller.getCurrY());
-                    mScroller.abortAnimation();
-                    scrollTo(0, getScrollY());
-                }
-                mDownY = y;
-                break;
+                return true;
             case MotionEvent.ACTION_MOVE:
-                int realDelta = (int) (mDownY - y);
-                mDownY = y;
-                if (mScroller.isFinished()) {
-                    //因为要循环滚动
-                    recycleMove(realDelta);
+                if (isSliding) {
+                    int realDelta = (int) (mDownY - y);
+                    mDownY = y;
+                    if (mScroller.isFinished()) {
+                        //因为要循环滚动
+                        recycleMove(realDelta);
+                    }
                 }
                 break;
+            case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
-                mVelocityTracker.computeCurrentVelocity(1000);
-                float yVelocity = mVelocityTracker.getYVelocity();
-                //滑动的速度大于规定的速度，或者向上滑动时，上一页页面展现出的高度超过1/2。则设定状态为State.ToPre
-                if (yVelocity > standerSpeed || ((getScrollY() + mHeight / 2) / mHeight < mStartScreen)) {
-                    mState = State.ToPre;
-                } else if (yVelocity < -standerSpeed || ((getScrollY() + mHeight / 2) / mHeight > mStartScreen)) {
-                    //滑动的速度大于规定的速度，或者向下滑动时，下一页页面展现出的高度超过1/2。则设定状态为State.ToNext
-                    mState = State.ToNext;
-                } else {
-                    mState = State.Normal;
+                if (isSliding) {
+                    isSliding = false;
+                    mVelocityTracker.computeCurrentVelocity(1000);
+                    float yVelocity = mVelocityTracker.getYVelocity();
+                    //滑动的速度大于规定的速度，或者向上滑动时，上一页页面展现出的高度超过1/2。则设定状态为State.ToPre
+                    if (yVelocity > standerSpeed || ((getScrollY() + mHeight / 2) / mHeight < mStartScreen)) {
+                        mState = State.ToPre;
+                    } else if (yVelocity < -standerSpeed || ((getScrollY() + mHeight / 2) / mHeight > mStartScreen)) {
+                        //滑动的速度大于规定的速度，或者向下滑动时，下一页页面展现出的高度超过1/2。则设定状态为State.ToNext
+                        mState = State.ToNext;
+                    } else {
+                        mState = State.Normal;
+                    }
+                    //根据mState进行相应的变化
+                    changeByState(yVelocity);
                 }
-                //根据mState进行相应的变化
-                changeByState(yVelocity);
                 if (mVelocityTracker != null) {
                     mVelocityTracker.recycle();
                     mVelocityTracker = null;
                 }
                 break;
         }
-        //返回true,消耗点击事件
-        return true;
+        return super.onTouchEvent(event);
+    }
+
+    public boolean isCanSliding(MotionEvent ev) {
+        float moveX;
+        float moveY;
+        moveX = ev.getX();
+        mTempY = moveY = ev.getY();
+        if (Math.abs(moveY - mDownX) > mTouchSlop && (Math.abs(moveY - mDownY) > (Math.abs(moveX - mDownX)))) {
+            return true;
+        }
+        return false;
     }
 
     private void changeByState(float yVelocity) {
@@ -186,6 +227,7 @@ public class StereoView extends ViewGroup {
 
     /**
      * mState = State.ToPre 时进行的动作
+     *
      * @param yVelocity 竖直方向的速度
      */
     private void toPreAction(float yVelocity) {
@@ -206,8 +248,10 @@ public class StereoView extends ViewGroup {
         mScroller.startScroll(0, startY, 0, delta, duration);
         addCount--;
     }
+
     /**
      * mState = State.ToNext 时进行的动作
+     *
      * @param yVelocity 竖直方向的速度
      */
     private void toNextAction(float yVelocity) {
@@ -397,6 +441,7 @@ public class StereoView extends ViewGroup {
 
     /**
      * 设置滚动时两个item的夹角度数
+     *
      * @param mAngle [0f,180f]
      * @return
      */
@@ -407,6 +452,7 @@ public class StereoView extends ViewGroup {
 
     /**
      * 是否开启3D效果
+     *
      * @param can3D
      * @return
      */
@@ -445,6 +491,7 @@ public class StereoView extends ViewGroup {
 
     /**
      * 上一页
+     *
      * @return
      */
     public StereoView toPre() {
@@ -458,6 +505,7 @@ public class StereoView extends ViewGroup {
 
     /**
      * 下一页
+     *
      * @return
      */
     public StereoView toNext() {
@@ -473,6 +521,7 @@ public class StereoView extends ViewGroup {
     public interface IStereoListener {
         //上滑一页时回调
         void toPre(int curScreen);
+
         //下滑一页时回调
         void toNext(int curScreen);
     }
