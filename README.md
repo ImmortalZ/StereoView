@@ -6,24 +6,24 @@
 
 **This is the original animation effects .**
 
-![](https://camo.githubusercontent.com/dc86ed6f966895ef1e343efc5cc7fd0469ec33c1/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535343532303530)
+![](https://github.com/ImmortalZ/StereoView/img/1.gif)
 
 **This is what we achieve animation effects.**
 
-![](https://camo.githubusercontent.com/d0e30babb28951722717fa32f9d273b7eec12232/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535373236373837)
+![](https://github.com/ImmortalZ/StereoView/img/2.gif)
 
 **we can infinite loop rolling**
 
-![](https://camo.githubusercontent.com/043b4cf0ad7c9bee2dcdb500bb26f81af3d903c6/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535383132303037)
+![](https://github.com/ImmortalZ/StereoView/img/3.gif)
 
 
 **Of course,on the basis of the original,I add the other animation effects.
 As you see.**
-![](https://camo.githubusercontent.com/55cb4f3363c24788d7398c81047cb6a506eecceb/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313631333532363233)
+![](https://github.com/ImmortalZ/StereoView/img/4.gif)
 
 **it extends ViewGroup,of course we can contain any view like imageview**
 
-![](https://camo.githubusercontent.com/69d48f79bb080c5c196ff99211e2d09522a6bb81/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313833393439323739)
+![](https://github.com/ImmortalZ/StereoView/img/5.gif)
 
 # How to use it ? #
 ---
@@ -68,28 +68,7 @@ define interface
 
 ---
 
-## License
-MIT License
 
-Copyright (c) 2016 Avraam Piperidis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 Android 3D立体无限旋转滚动容器
 
