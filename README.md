@@ -6,7 +6,7 @@
 
 **This is the original animation effects .**
 
-![](https://github.com/ImmortalZ/StereoView/img/1.gif)
+![](https://github.com/ImmortalZ/StereoView/blob/master/img/1.gif)
 
 **This is what we achieve animation effects.**
 
