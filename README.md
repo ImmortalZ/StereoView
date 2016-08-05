@@ -2,6 +2,8 @@
 
 --The idea is from weibo.com
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StereoView-green.svg?style=true)](https://android-arsenal.com/details/3/4058)
+
 **This is the original animation effects .**
 
 ![](https://camo.githubusercontent.com/dc86ed6f966895ef1e343efc5cc7fd0469ec33c1/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630373135313535343532303530)
@@ -66,7 +68,28 @@ define interface
 
 ---
 
+## License
+MIT License
 
+Copyright (c) 2016 Avraam Piperidis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 Android 3D立体无限旋转滚动容器
 
@@ -125,3 +148,25 @@ Android 3D立体无限旋转滚动容器
 ----
 
 目前容器的item数量需要大于等于3，小于3个滑动时会些问题。设置的最开始展示的item位置不能是第一个或者最后一个，这么做是为了保证第1个或者最后一个被隐藏，从而保证最开始向上滑动或者向下滑动时的正常。
+
+## License
+MIT License
+Copyright (c) 2016 Avraam Piperidis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
