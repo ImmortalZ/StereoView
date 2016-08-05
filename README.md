@@ -10,20 +10,20 @@
 
 **This is what we achieve animation effects.**
 
-![](https://github.com/ImmortalZ/StereoView/img/2.gif)
+![](https://github.com/ImmortalZ/StereoView/blob/master/img/2.gif)
 
 **we can infinite loop rolling**
 
-![](https://github.com/ImmortalZ/StereoView/img/3.gif)
+![](https://github.com/ImmortalZ/StereoView/blob/master/img/3.gif)
 
 
 **Of course,on the basis of the original,I add the other animation effects.
 As you see.**
-![](https://github.com/ImmortalZ/StereoView/img/4.gif)
+![](https://github.com/ImmortalZ/StereoView/blob/master/img/4.gif)
 
 **it extends ViewGroup,of course we can contain any view like imageview**
 
-![](https://github.com/ImmortalZ/StereoView/img/5.gif)
+![](https://github.com/ImmortalZ/StereoView/blob/master/img/5.gif)
 
 # How to use it ? #
 ---
@@ -76,25 +76,25 @@ Android 3D立体无限旋转滚动容器
 
 **原效果**
 
-![这里写图片描述](http://img.blog.csdn.net/20160715155452050)
+![这里写图片描述](https://github.com/ImmortalZ/StereoView/blob/master/img/1.gif)
 
 **我们实现的效果：**
 
 （为了更加可定制化，我在原图基础上新增了新的效果）
 
-![这里写图片描述](http://img.blog.csdn.net/20160715155726787)
+![这里写图片描述](https://github.com/ImmortalZ/StereoView/blob/master/img/2.gif)
 
 可以快速滚动，并且无限循环
 
-![这里写图片描述](http://img.blog.csdn.net/20160715155812007)
+![这里写图片描述](https://github.com/ImmortalZ/StereoView/blob/master/img/3.gif)
 
 这个是对一些参数的进行设定
 
-![这里写图片描述](http://img.blog.csdn.net/20160715161352623)
+![这里写图片描述](https://github.com/ImmortalZ/StereoView/blob/master/img/4.gif)
 
 对图片的包裹效果
 
-![这里写图片描述](http://img.blog.csdn.net/20160715183949279)
+![这里写图片描述](https://github.com/ImmortalZ/StereoView/blob/master/img/5.gif)
 
 因为本身继承自ViewGroup，所以基本控件都是可以包裹的
 
